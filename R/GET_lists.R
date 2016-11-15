@@ -28,7 +28,7 @@ get_lists <- function(apikey = NULL,
   request <- list(...)
 
   # Construct API url
-  apiurl <- paste0("https://", mailchimpR::apiending(apikey),".api.mailchimp.com/3.0/lists")
+  apiurl <- paste0("https://", mailchimpR:::apiending(apikey),".api.mailchimp.com/3.0/lists")
 
   # Call the API to get the reports data
   GETdata <- httr::GET(url = apiurl, query = request,
@@ -76,7 +76,7 @@ get_list <- function(list_id = NULL,
   request <- list(...)
 
   # Construct API url
-  apiurl <- paste0("https://", apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id)
+  apiurl <- paste0("https://", mailchimpR:::apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id)
 
   # Call the API to get the reports data
   GETdata <- httr::GET(url = apiurl, query = request,
@@ -124,7 +124,7 @@ get_list_members <- function(list_id = NULL,
   request <- list(...)
 
   # Construct API url
-  apiurl <- paste0("https://", apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id, "/members")
+  apiurl <- paste0("https://", mailchimpR:::apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id, "/members")
 
   # Call the API to get the reports data
   GETdata <- httr::GET(url = apiurl, query = request,
@@ -173,7 +173,7 @@ get_list_member <- function(list_id = NULL,
   request <- list(...)
 
   # Construct API url
-  apiurl <- paste0("https://", apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id, "/members/", subscriber_hash)
+  apiurl <- paste0("https://", mailchimpR:::apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id, "/members/", subscriber_hash)
 
   # Call the API to get the reports data
   GETdata <- httr::GET(url = apiurl, query = request,
@@ -222,7 +222,7 @@ get_list_member_activity <- function(list_id = NULL,
   request <- list(...)
 
   # Construct API url
-  apiurl <- paste0("https://", apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id, "/members/", subscriber_hash, "/activity")
+  apiurl <- paste0("https://", mailchimpR:::apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id, "/members/", subscriber_hash, "/activity")
 
   # Call the API to get the reports data
   GETdata <- httr::GET(url = apiurl, query = request,
@@ -271,7 +271,7 @@ get_list_member_goals <- function(list_id = NULL,
   request <- list(...)
 
   # Construct API url
-  apiurl <- paste0("https://", apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id, "/members/", subscriber_hash, "/goals")
+  apiurl <- paste0("https://", mailchimpR:::apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id, "/members/", subscriber_hash, "/goals")
 
   # Call the API to get the reports data
   GETdata <- httr::GET(url = apiurl, query = request,
@@ -320,7 +320,7 @@ get_list_member_notes <- function(list_id = NULL,
   request <- list(...)
 
   # Construct API url
-  apiurl <- paste0("https://", apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id, "/members/", subscriber_hash, "/notes")
+  apiurl <- paste0("https://", mailchimpR:::apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id, "/members/", subscriber_hash, "/notes")
 
   # Call the API to get the reports data
   GETdata <- httr::GET(url = apiurl, query = request,
@@ -370,7 +370,7 @@ get_list_member_note <- function(list_id = NULL,
   request <- list(...)
 
   # Construct API url
-  apiurl <- paste0("https://", apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id, "/members/", subscriber_hash, "/notes/", note_id)
+  apiurl <- paste0("https://", mailchimpR:::apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id, "/members/", subscriber_hash, "/notes/", note_id)
 
   # Call the API to get the reports data
   GETdata <- httr::GET(url = apiurl, query = request,
@@ -417,7 +417,7 @@ get_list_segments <- function(list_id = NULL,
   request <- list(...)
 
   # Construct API url
-  apiurl <- paste0("https://", apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id, "/segments")
+  apiurl <- paste0("https://", mailchimpR:::apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id, "/segments")
 
   # Call the API to get the reports data
   GETdata <- httr::GET(url = apiurl, query = request,
@@ -466,7 +466,7 @@ get_list_segments <- function(list_id = NULL,
   request <- list(...)
 
   # Construct API url
-  apiurl <- paste0("https://", apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id, "/segments/", segment_id)
+  apiurl <- paste0("https://", mailchimpR:::apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id, "/segments/", segment_id)
 
   # Call the API to get the reports data
   GETdata <- httr::GET(url = apiurl, query = request,
@@ -515,7 +515,7 @@ get_list_segment_members <- function(list_id = NULL,
   request <- list(...)
 
   # Construct API url
-  apiurl <- paste0("https://", apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id, "/segments/", segment_id, "/members")
+  apiurl <- paste0("https://", mailchimpR:::apiending(apikey),".api.mailchimp.com/3.0/lists/", list_id, "/segments/", segment_id, "/members")
 
   # Call the API to get the reports data
   GETdata <- httr::GET(url = apiurl, query = request,
