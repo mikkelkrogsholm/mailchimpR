@@ -1,0 +1,14 @@
+Package: mailchimpR
+Type: Package
+Title: mailchimpR is a R wrapper for the mailchimp API
+Version: 0.1.0
+Author: Mikkel Freltoft Krogsholm
+Maintainer: Mikkel Freltoft Krogsholm <mikkel@56n.dk>
+Description: The package wraps the mailchimp api and aims to provide easy access to mailchimp from R.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 5.0.1
+Imports:
+  httr,
+  stringr
