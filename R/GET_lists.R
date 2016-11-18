@@ -451,7 +451,7 @@ get_list_segments <- function(list_id = NULL,
 #' ## End(**Not run**)
 #'
 #' @export
-get_list_segments <- function(list_id = NULL,
+get_list_segment <- function(list_id = NULL,
                               segment_id = NULL,
                               apikey = NULL,
                               user = "anystring",
